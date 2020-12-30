@@ -1,3 +1,5 @@
+import { setSearchFocus } from "./searchBar";
+
 document.addEventListener("readystatechange", (evt) => {
     if (event.target.readyState === "complete") {
         initApp();
@@ -5,7 +7,7 @@ document.addEventListener("readystatechange", (evt) => {
 });
 
 const initApp = () => {
-    // set the focus
+    setSearchFocus();
 
     // 3 listeners clear text
 
@@ -13,3 +15,11 @@ const initApp = () => {
     form.addEventListener("submit",
         submitTheSearch);
 }
+
+// Procedural "workflow" function
+const submiTheSearch = (evt) => {
+    evt.preventDefault();
+    //delete search results
+    //process the search
+    setSearchFocus();
+};
