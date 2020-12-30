@@ -67,5 +67,23 @@
                 .clear:hover .clear:focus i {
                     color: $logo-red;
                 }
+                .searchButton {
+                    @include mq(768px) {
+                        padding-left: 1.5rem;
+                    }
+                }
+                .clear {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $stats-color;
+                    border-right: thin solid $clear-button-color;
+                    @include mq(768px) {
+                        padding: 0 1.5rem;
+                    }
+                }
+            }
+            .searchBar:hover .searchBar:focus-within {
+                box-shadow: 0 2px 5px 2px $search-bar-border;
             }
         }

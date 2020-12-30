@@ -206,4 +206,35 @@ img {
 .searchEntry .searchBar .clear:hover .clear:focus i {
   color: #db3236;
 }
+
+@media only scren and (min-width: 768px) {
+  .searchEntry .searchBar .searchButton {
+    padding-left: 1.5rem;
+  }
+}
+
+.searchEntry .searchBar .clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #70757a;
+  border-right: thin solid #d9d9d9;
+}
+
+@media only scren and (min-width: 768px) {
+  .searchEntry .searchBar .clear {
+    padding: 0 1.5rem;
+  }
+}
+
+.searchEntry .searchBar:hover .searchBar:focus-within {
+  -webkit-box-shadow: 0 2px 5px 2px #e6e6e6;
+          box-shadow: 0 2px 5px 2px #e6e6e6;
+}
 /*# sourceMappingURL=style.css.map */
