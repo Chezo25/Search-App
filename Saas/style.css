@@ -1,4 +1,4 @@
-main, footer {
+main, footer, .searchEntry {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,5 +60,150 @@ footer p a {
 
 img {
   display: block;
+}
+
+.blue {
+  color: #4885ed;
+}
+
+.yellow {
+  color: #ffc107;
+}
+
+.red {
+  color: #db3236;
+}
+
+.green {
+  color: #3cba54;
+}
+
+.exclaim {
+  display: inline-block;
+  font-size: 2.5rem;
+  -webkit-transform: rotate(12.5deg);
+          transform: rotate(12.5deg);
+}
+
+@media only scren and (min-width: 768px) {
+  .exclaim {
+    font-size: 5rem;
+  }
+}
+
+.offscreen {
+  position: absolute;
+  left: 10000px;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.searchEntry {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 40px;
+}
+
+.searchEntry .logo {
+  letter-spacing: -5px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+@media only scren and (min-width: 768px) {
+  .searchEntry .logo {
+    font-size: 4rem;
+    letter-spacing: -10px;
+  }
+}
+
+.searchEntry .searchBar {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #e6e6e6;
+  border-radius: 500px;
+  padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+}
+
+@media only scren and (min-width: 768px) {
+  .searchEntry .searchBar {
+    padding: 1.5rem 1.7rem;
+    width: 80vw;
+  }
+}
+
+@media only scren and (min-width: 1025px) {
+  .searchEntry .searchBar {
+    width: 60vw;
+  }
+}
+
+.searchEntry .searchBar input[type="text"] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 0.75rem;
+  text-align: left;
+  letter-spacing: 0.1rem;
+  border: 0;
+  outline: 0;
+  min-width: 150px;
+}
+
+@media only scren and (min-width: 768px) {
+  .searchEntry .searchBar input[type="text"] {
+    font-size: 1.25rem;
+  }
+}
+
+.searchEntry .searchBar .button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  min-width: 48px;
+  min-height: 48px;
+  outline: none;
+}
+
+.searchEntry .searchBar .button i {
+  font-family: Font Awesome 5 Free;
+  font-size: 1rem;
+}
+
+@media only scren and (min-width: 768px) {
+  .searchEntry .searchBar .button i {
+    font-size: 1.5rem;
+  }
+}
+
+.searchEntry .searchBar .button:hover i,
+.searchEntry .searchBar .button:focus i {
+  padding-bottom: 00.5rem;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+}
+
+.searchEntry .searchBar .searchButton:hover .searchButton:focus i {
+  color: #3cba54;
+}
+
+.searchEntry .searchBar .clear:hover .clear:focus i {
+  color: #db3236;
 }
 /*# sourceMappingURL=style.css.map */
