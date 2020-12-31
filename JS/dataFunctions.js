@@ -9,7 +9,11 @@ export const retrieveSearchResults = async(searchTerm) => {
     const wikiSearchString = getWikiSearchString(searchTerm);
     const wikiSearchResults = await requestData(wikiSearchString);
     let resultArray = [];
-}
+    if (wikisearchResults.hasOwnProperty("query")) {
+        resultArray = processwikiResults(wikiSearchResults.query.pages);
+    }
+    return resultArray;
+};
 
 const getWikiSearchString = (searchTerm) => {
     const maxChars = getMaxChars();
@@ -37,3 +41,21 @@ const requestData = async(searchString) => {
         console.log(err);
     }
 };
+
+const processwikiResults = (results) => {
+    const resultArray = [];
+    Object.keys(results).forEach(ket => {
+        const id = key;
+        const title = results[key].title;
+        const text = results[key].extract;
+        const img = results[key].hasOwnProperty("thumbnail") ?
+            results[key].thumbnail.source :
+            null;
+        const items = {
+            id: id,
+            title: title,
+            img: img,
+            text: text,
+        }
+    })
+}
