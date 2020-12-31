@@ -1,8 +1,9 @@
 import { setSearchFocus } from "./searchBar";
 import { getSearchTerm } from "./dataFunctions";
+import { retrieveSearchResults } from "./dataFunctions";
 
 document.addEventListener("readystatechange", (evt) => {
-    if (event.target.readyState === "complete") {
+    if (evt.target.readyState === "complete") {
         initApp();
     }
 });
@@ -10,7 +11,7 @@ document.addEventListener("readystatechange", (evt) => {
 const initApp = () => {
     setSearchFocus();
 
-    // 3 listeners clear text
+    // TODO:3 listeners clear text
 
     const form = document.getElementById("searchBar");
     form.addEventListener("submit",
@@ -20,15 +21,17 @@ const initApp = () => {
 // Procedural "workflow" function
 const submiTheSearch = (evt) => {
     evt.preventDefault();
-    //delete search results
+    //TODOdelete search results
     processTheSearch();
     setSearchFocus();
 };
 
 //Procedural1
 const processTheSearch = async(evt) => {
-    //clear the stats line
+    //TODOclear the stats line
     const searchTerm = getSearchTerm();
     if (searchTerm === "") return;
     const resultArray = await retrieveSearchResults(searchTerm);
+    if (resultArray.length) //TODObuild search results
+    //TODO:set stats lines
 };

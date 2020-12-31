@@ -56,6 +56,8 @@ const processwikiResults = (results) => {
             title: title,
             img: img,
             text: text,
-        }
-    })
+        };
+        resultArray.push(item);
+    });
+    return resultArray;
 }
