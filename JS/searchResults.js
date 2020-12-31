@@ -1,3 +1,13 @@
+export const deleteSearchResults = () => {
+    const parentElement = document.getElementById("searchResults");
+    let children = parentElement.lastElementchild;
+    while (child) {
+        parentElement.removeChild(child);
+        child = parentElement.lastElementchild;
+    }
+};
+
+
 export const buildSearchResults = (resultArray) => {
     resultArray.forEach(result => {
         const resultItem = createResultItem(result);
@@ -34,5 +44,30 @@ const createResultImage = (result) => {
     resultImage.classList.add("resultImage");
     const img = document.createElement("img");
     img.src = result.img;
-    img.alt = resultImage
+    img.alt = result.title;
+    resultImage.append(img);
+    return resultImage;
+}
+
+const createResultText = (result) => {
+    const resultText = document.createElement("div");
+    resultImage.classList.add("resultText");
+    const resultDescription = document.createElement("p");
+    resultDescription.classList.add("resultDescription");
+    resultDescription.textContent = result.text;
+    resultText.append(resultDescription);
+    return resultText;
+}
+
+export const clearStatsline = () => {
+    document.getElementById("stats").textContent = "";
+};
+
+export const setStatsline = (numberofResults) => {
+    const statsline = document.getElementById('stats');
+    if (numberofResults) {
+        statsline.textContent = `DIsplaying ${numberOfResults} results.`;
+    } else {
+        statsline.textContent = "Sorry, No reults";
+    }
 }
